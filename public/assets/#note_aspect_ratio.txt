@@ -1,0 +1,2 @@
+product/category 1:1
+slider 16:7
