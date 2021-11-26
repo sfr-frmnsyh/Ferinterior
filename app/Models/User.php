@@ -58,4 +58,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class, 'id_user', 'id');
+    }
 }
