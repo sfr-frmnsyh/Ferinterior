@@ -76,13 +76,13 @@
     <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 py-1">
         
-        @include('layouts.home.home-navbar')
+        @include('layouts.home.app-navbar')
 
     </nav>
 
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         
-        @include('layouts.home.home-carousel')
+        @include('layouts.home.app-carousel')
 
     </div>
 
@@ -119,11 +119,11 @@ Alternatively if you want to just have a single hero
 
     <section class="bg-white py-8">
 
-        @include('layouts.home.home-about')
+        @include('layouts.home.app-about')
 
     </section>
 
-    @include('layouts.home.home-footer')
+    @include('layouts.home.app-footer')
 
 </body>
 
