@@ -72,7 +72,7 @@ class ProductDetail extends Component
         OrderDetail::create([
             'id_product' => $this->product->id,
             'id_order' => $order->id,
-            'qty' => $this->product->id,
+            'qty' => $this->qty,
             'price' => $price,
             'colour' => $this->product->colour
         ]);

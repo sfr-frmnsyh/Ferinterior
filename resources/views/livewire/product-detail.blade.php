@@ -76,11 +76,6 @@
                     </div>
                 </div>
             </form>
-            <button wire:click="SwalTest"
-                class="flex ml-auto text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded disabled:opacity-50 @if (!$product->is_ready) opacity-50 cursor-not-allowed @endif "
-                @if (!$product->is_ready) disabled @endif>
-                SWAL
-            </button>
         </div>
     </section>
 </div>
