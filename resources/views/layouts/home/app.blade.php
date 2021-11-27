@@ -26,7 +26,7 @@
 
     <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 py-1">
-        @include('layouts.home.app-navbar')
+        @livewire('navbar')
     </nav>
 
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
