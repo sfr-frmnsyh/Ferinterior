@@ -21,9 +21,9 @@ class Navbar extends Component
     public function listener_addToCart()
     {
         if (Auth::user()) {
-            $order = Order::where('user_id', Auth::user()->id)->where('status', 0)->first();
+            $order = Order::where('id_user', Auth::user()->id)->where('status', 0)->first();
             if ($order) {
-                $this->cart_amount = OrderDetail::where('order_id', $order->id)->count();
+                $this->cart_amount = OrderDetail::where('id_order', $order->id)->count();
             } else {
                 $this->cart_amount = 0;
             }
@@ -33,9 +33,9 @@ class Navbar extends Component
     public function mount()
     {
         if (Auth::user()) {
-            $order = Order::where('user_id', Auth::user()->id)->where('status', 0)->first();
+            $order = Order::where('id_user', Auth::user()->id)->where('status', 0)->first();
             if ($order) {
-                $this->cart_amount = OrderDetail::where('order_id', $order->id)->count();
+                $this->cart_amount = OrderDetail::where('id_order', $order->id)->count();
             } else {
                 $this->cart_amount = 0;
             }
