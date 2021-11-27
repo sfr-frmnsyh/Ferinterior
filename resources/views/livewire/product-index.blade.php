@@ -25,7 +25,7 @@
     </nav>
 
     {{-- PRODUCT --}}
-    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+    <div class="w-full container mx-auto flex flex-wrap items-center mt-0 px-2 py-3">
         @foreach ($products as $product)
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <a href="{{ route('products.detail', $product->id) }}">
