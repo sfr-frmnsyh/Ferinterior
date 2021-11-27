@@ -48,7 +48,7 @@
                                         </div>
 
                                         <input wire:model="qty" id="qty" type="number" placeholder="1" value="{{ old('qty') }}"
-                                            class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12 @error('qty') border-red-500 @enderror">
+                                            class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12 @error('qty') border-red-500 @enderror" min="1">
                                     </div>
                                     @error('qty')
                                         <span
