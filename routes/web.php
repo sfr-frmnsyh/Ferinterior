@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Home::class)->name('/');
+Route::get('/products', [App\Http\Livewire\ProductIndex::class, '__invoke'])->name('products');
 Route::get('/products/{productId}', [App\Http\Livewire\ProductDetail::class, '__invoke'])->name('products.detail');
 
 

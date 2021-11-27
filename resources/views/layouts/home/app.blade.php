@@ -19,7 +19,7 @@
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    @livewireStyles
 </head>
 
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
@@ -48,6 +48,7 @@
     </section>
 
     @include('layouts.home.app-footer')
+    @livewireScripts
 </body>
 
 </html>
