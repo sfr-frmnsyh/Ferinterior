@@ -19,6 +19,7 @@ Route::get('/products', [App\Http\Livewire\ProductIndex::class, '__invoke'])->na
 Route::get('/products/category/{categoryId}', [App\Http\Livewire\ProductCategory::class, '__invoke'])->name('products.category');
 Route::get('/products/{productId}', [App\Http\Livewire\ProductDetail::class, '__invoke'])->name('products.detail');
 Route::get('/cart', [App\Http\Livewire\Cart::class, '__invoke'])->name('cart');
+Route::get('/checkout', [App\Http\Livewire\Checkout::class, '__invoke'])->name('checkout');
 
 
 
