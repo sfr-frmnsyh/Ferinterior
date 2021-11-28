@@ -17,15 +17,9 @@
                             <img class="mr-3" src="{{ url('assets/bank/bri.png') }}" alt="BRI" width="75">
                             <div>
                                 <p class="font-semibold text-base">Bank BRI</p>
-                                <p class="font-semibold text-xs text-gray-400">No. Rekening 123-456-789 atas nama
-                                    <strong>Bernard Mahfoudz</strong>
+                                <p class="font-semibold text-xs text-gray-400">No. Rekening 123-456-789 atas nama:
+                                    <p class="font-extrabold text-xs">Bernard Mahfoudz</p>
                                 </p>
-                            </div>
-                        </div>
-
-                        <div class="flex space-x-2 items-center">
-                            <div class="bg-yellow-200 rounded-md p-2 flex items-center">
-                                <p class="text-yellow-600 font-semibold text-xs">-C4,678</p>
                             </div>
                         </div>
                     </div>
@@ -39,15 +33,9 @@
                             <img class="mr-3" src="{{ url('assets/bank/bni.png') }}" alt="BRI" width="75">
                             <div>
                                 <p class="font-semibold text-base">Bank BNI</p>
-                                <p class="font-semibold text-xs text-gray-400">No. Rekening 521-666-129 atas nama
-                                    <strong>Bernard Mahfoudz</strong>
+                                <p class="font-semibold text-xs text-gray-400">No. Rekening 521-666-129 atas nama:
+                                    <p class="font-bold text-xs">Bernard Mahfoudz</p>
                                 </p>
-                            </div>
-                        </div>
-
-                        <div class="flex space-x-2 items-center">
-                            <div class="bg-yellow-200 rounded-md p-2 flex items-center">
-                                <p class="text-yellow-600 font-semibold text-xs">-C4,678</p>
                             </div>
                         </div>
                     </div>

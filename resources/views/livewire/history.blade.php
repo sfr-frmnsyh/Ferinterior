@@ -53,6 +53,7 @@
                             @endphp
                             @foreach ($items as $item)
                                 {{ $item->product->name }} (Amount : {{ $item->qty }})
+                                <br>
                             @endforeach
                         </td>
                         <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
@@ -94,16 +95,16 @@
     <div class="w-full">
         <h4>Payment Information</h4>
         <hr>
-        <div class="flex items-center">
+        <div class="flex space-x-5 items-center">
             <div class="flex-auto mb-4">
                 <!-- Start Card List -->
                 <div class="bg-white p-3 rounded-xl shadow-xl flex items-center justify-between mt-4">
                     <div class="flex space-x-6 items-center">
-                        <img class="mr-3" src="{{ url('assets/bank/bni.png') }}" alt="BRI" width="75">
+                        <img class="mr-3" src="{{ url('assets/bank/bri.png') }}" alt="BRI" width="75">
                         <div>
-                            <p class="font-semibold text-base">Bank BNI</p>
-                            <p class="font-semibold text-xs text-gray-400">No. Rekening 521-666-129 atas nama
-                                <strong>Bernard Mahfoudz</strong>
+                            <p class="font-semibold text-base">Bank BRI</p>
+                            <p class="font-semibold text-xs text-gray-400">No. Rekening 123-456-789 atas nama:
+                            <p class="font-extrabold text-xs">Bernard Mahfoudz</p>
                             </p>
                         </div>
                     </div>
@@ -117,8 +118,8 @@
                         <img class="mr-3" src="{{ url('assets/bank/bni.png') }}" alt="BRI" width="75">
                         <div>
                             <p class="font-semibold text-base">Bank BNI</p>
-                            <p class="font-semibold text-xs text-gray-400">No. Rekening 521-666-129 atas nama
-                                <strong>Bernard Mahfoudz</strong>
+                            <p class="font-semibold text-xs text-gray-400">No. Rekening 521-666-129 atas nama:
+                            <p class="font-bold text-xs">Bernard Mahfoudz</p>
                             </p>
                         </div>
                     </div>
