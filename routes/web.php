@@ -20,6 +20,7 @@ Route::get('/products/category/{categoryId}', [App\Http\Livewire\ProductCategory
 Route::get('/products/{productId}', [App\Http\Livewire\ProductDetail::class, '__invoke'])->name('products.detail');
 Route::get('/cart', [App\Http\Livewire\Cart::class, '__invoke'])->name('cart');
 Route::get('/checkout', [App\Http\Livewire\Checkout::class, '__invoke'])->name('checkout');
+Route::get('/history', [App\Http\Livewire\History::class, '__invoke'])->name('history');
 
 
 
