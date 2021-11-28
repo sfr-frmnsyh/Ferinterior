@@ -78,10 +78,12 @@
             </form>
         </div>
     </section>
+
+    {{-- INLINE SCRIPT --}}
+    <script>
+        document.addEventListener('livewire:load', function() {
+            // Execute on livewire:load (first load)
+        })
+    </script>
 </div>
 
-<script>
-    document.addEventListener('livewire:load', function() {
-        // Execute on livewire:load (first load)
-    })
-</script>

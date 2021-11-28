@@ -12,6 +12,23 @@ class Cart extends Component
     protected $order;
     protected $orderDetail = [];
 
+    protected $listeners = ['destroy'];
+
+    // Sweetalert Event confirmation (delete cart item)
+    public function destroy_ask($id)
+    {
+        // Send Event to component (Sweetalert)
+        $this->dispatchBrowserEvent('swal:confirmation', [
+            'title' => 'Are you sure?',
+            'message' => 'You wont be able to revert this!',
+            'message_after' => 'Your item has been deleted.',
+            'confirm_text' => 'Yes, remove item',
+            'icon' => 'warning',
+            'id' => $id,
+            'emit' => 'destroy',
+        ]);
+    }
+
     public function destroy($id)
     {
         // find data detail
