@@ -80,19 +80,8 @@
     </section>
 </div>
 
-
 <script>
     document.addEventListener('livewire:load', function() {
         // Execute on livewire:load (first load)
-    })
-
-    document.addEventListener('swal:success', function(e) {
-        Swal.fire({
-            title: e.detail.title,
-            text: e.detail.message,
-            icon: e.detail.icon,
-            confirmButtonText: 'Cool'
-        });
-
     })
 </script>

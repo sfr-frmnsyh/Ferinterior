@@ -43,6 +43,7 @@
 
         </div>
     </section>
+    @livewire('scripts-sweetalert')
 
     @include('layouts.home.app-footer')
     @livewireScripts
