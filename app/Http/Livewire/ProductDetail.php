@@ -21,16 +21,6 @@ class ProductDetail extends Component
         }
     }
 
-    public function SwalTest()
-    {
-        $this->dispatchBrowserEvent('swal:test', [
-            'title' => 'SUCCESS',
-            'message' => 'Success add to cart',
-            'icon' => 'success',
-            'iconColor' => 'green'
-        ]);
-    }
-
     public function addToCart()
     {
         $this->validate([
@@ -68,7 +58,7 @@ class ProductDetail extends Component
             $order->update();
         }
 
-        // ORDER DETAIL
+        // Create data in ORDER DETAIL
         OrderDetail::create([
             'id_product' => $this->product->id,
             'id_order' => $order->id,
@@ -77,13 +67,19 @@ class ProductDetail extends Component
             'colour' => $this->product->colour
         ]);
 
+        // emit for navbar cart amount Refresh
         $this->emit('addToCart');
+
+        // Send Event to Sweetalert
         $this->dispatchBrowserEvent('swal:success', [
             'title' => 'SUCCESS',
             'message' => 'Success add to cart',
             'icon' => 'success',
             'iconColor' => 'green'
         ]);
+
+        // Reset input form value
+        $this->reset('qty');
         return redirect()->back();
     }
     

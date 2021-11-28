@@ -93,5 +93,6 @@
             icon: e.detail.icon,
             confirmButtonText: 'Cool'
         });
+        
     })
 </script>
