@@ -12,6 +12,7 @@ class Cart extends Component
     protected $order;
     protected $orderDetail = [];
 
+    // Listener for livewire emit
     protected $listeners = ['destroy'];
 
     // Sweetalert Event confirmation (delete cart item)
@@ -52,7 +53,6 @@ class Cart extends Component
             // delete the order detail data and emit livewire listener
             $orderDetail->delete();
             $this->emit('addToCart');
-            session()->flash('message', 'Order Deleted');
         }
     }
 
