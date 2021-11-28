@@ -2,10 +2,10 @@
     <script>
         document.addEventListener('swal:success', function(e) {
             Swal.fire({
+                icon: e.detail.icon,
                 title: e.detail.title,
                 text: e.detail.message,
-                icon: e.detail.icon,
-                confirmButtonText: 'Cool'
+                confirmButtonColor: '#b0a64b',
             });
         })
         document.addEventListener('swal:confirmation', function(e) {
@@ -14,8 +14,8 @@
                 text: e.detail.message,
                 icon: e.detail.icon,
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                confirmButtonColor: '#b0a64b',
+                cancelButtonColor: '#aeaea6',
                 confirmButtonText: e.detail.confirm_text
             }).then((result) => {
                 if (result.isConfirmed) {

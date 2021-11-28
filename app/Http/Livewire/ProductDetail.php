@@ -72,10 +72,9 @@ class ProductDetail extends Component
 
         // Send Event to Sweetalert
         $this->dispatchBrowserEvent('swal:success', [
-            'title' => 'SUCCESS',
-            'message' => 'Success add to cart',
+            'title' => 'Success',
+            'message' => 'add to cart',
             'icon' => 'success',
-            'iconColor' => 'green'
         ]);
 
         // Reset input form value
