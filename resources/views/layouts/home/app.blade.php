@@ -44,10 +44,6 @@
         </div>
     </section>
 
-    <section class="bg-white py-8">
-        @include('layouts.home.app-about')
-    </section>
-
     @include('layouts.home.app-footer')
     @livewireScripts
 </body>

@@ -21,6 +21,7 @@ Route::get('/products/{productId}', [App\Http\Livewire\ProductDetail::class, '__
 Route::get('/cart', [App\Http\Livewire\Cart::class, '__invoke'])->name('cart');
 Route::get('/checkout', [App\Http\Livewire\Checkout::class, '__invoke'])->name('checkout');
 Route::get('/history', [App\Http\Livewire\History::class, '__invoke'])->name('history');
+Route::get('/aboutus', [App\Http\Livewire\AboutUs::class, '__invoke'])->name('aboutus');
 
 
 
