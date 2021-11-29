@@ -25,6 +25,7 @@ Route::get('/aboutus', [App\Http\Livewire\AboutUs::class, '__invoke'])->name('ab
 
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/products', [App\Http\Livewire\Master\MasterProduct::class, '__invoke'])->name('master.products');
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/aboutus', [App\Http\Livewire\Master\MasterAboutUs::class, '__invoke'])->name('master.aboutus');
+Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/orders', [App\Http\Livewire\Master\MasterOrder::class, '__invoke'])->name('master.orders');
 
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/dashboard', function () {
     return view('dashboard');

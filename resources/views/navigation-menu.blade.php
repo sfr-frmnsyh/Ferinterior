@@ -36,6 +36,9 @@
                                     {{ __('Master Data') }}
                                 </div>
         
+                                <x-jet-dropdown-link href="{{ route('master.orders') }}">
+                                    {{ __('Orders') }}
+                                </x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="{{ route('master.products') }}">
                                     {{ __('Products') }}
                                 </x-jet-dropdown-link>
