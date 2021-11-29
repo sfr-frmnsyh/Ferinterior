@@ -44,22 +44,18 @@ class DatabaseSeeder extends Seeder
 
         Category::create([
             'name' => 'Sofa',
-            'image' => 'sofa.png',
         ]);
 
         Category::create([
             'name' => 'Chair',
-            'image' => 'chair.png',
         ]);
 
         Category::create([
             'name' => 'Wardrobe',
-            'image' => 'wardrobe.png',
         ]);
 
         Category::create([
             'name' => 'Table',
-            'image' => 'table.png',
         ]);
         
         Product::create([
