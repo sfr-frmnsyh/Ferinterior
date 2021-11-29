@@ -21,7 +21,7 @@
                 if (result.isConfirmed) {
                     Livewire.emit(e.detail.emit, e.detail.id);
                     Swal.fire(
-                        'Deleted!',
+                        'Process success',
                         e.detail.message_after,
                         'success'
                     )
