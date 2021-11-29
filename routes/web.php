@@ -23,9 +23,8 @@ Route::get('/checkout', [App\Http\Livewire\Checkout::class, '__invoke'])->name('
 Route::get('/history', [App\Http\Livewire\History::class, '__invoke'])->name('history');
 Route::get('/aboutus', [App\Http\Livewire\AboutUs::class, '__invoke'])->name('aboutus');
 
-Route::get('/master/products', [App\Http\Livewire\Master\MasterProduct::class, '__invoke'])->name('master.products');
-
-
+Route::middleware(['auth:sanctum', 'verified'])->get('/master/products', [App\Http\Livewire\Master\MasterProduct::class, '__invoke'])->name('master.products');
+Route::middleware(['auth:sanctum', 'verified'])->get('/master/aboutus', [App\Http\Livewire\Master\MasterAboutUs::class, '__invoke'])->name('master.aboutus');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

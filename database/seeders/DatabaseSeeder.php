@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\AboutUs;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
@@ -29,6 +30,16 @@ class DatabaseSeeder extends Seeder
             'name' => 'Safri Firmansyah',
             'email' => 'safri.firmansyah@gmail.com',
             'password' => bcrypt('password')
+        ]);
+
+        AboutUs::create([
+            'name' => 'Ferinterior',
+            'address' => 'Jl. Piltover 5 no 125',
+            'phone_number' => '+9955555125125',
+            'link_facebook' => 'https://github.com/sfr-frmnsyh',
+            'link_twitter' => 'https://github.com/sfr-frmnsyh',
+            'link_instagram' => 'https://github.com/sfr-frmnsyh',
+            'about' => 'Ferinterior adalah sebuah peritel perabot untuk rumah tangga dari Noxus. Pada musim dingin 1920, terdapat 5 toko Ferinterior yang tersebar di wilayah Noxus. Katalog Ferinterior yang berisi info produk Ferinterior diperkirakan adalah Toko yang pendistribusiannya terluas di seantero Runetera.'
         ]);
 
         Category::create([

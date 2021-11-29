@@ -39,6 +39,9 @@
                                 <x-jet-dropdown-link href="{{ route('master.products') }}">
                                     {{ __('Products') }}
                                 </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('master.aboutus') }}">
+                                    {{ __('About Us') }}
+                                </x-jet-dropdown-link>
         
                             </x-slot>
         
