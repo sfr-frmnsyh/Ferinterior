@@ -35,9 +35,9 @@ class ProductCategory extends Component
     public function render()
     {
         if ($this->search) {
-            $products = Product::where('id_category', $this->category->id)->where('name', 'like', '%'.$this->search.'%')->paginate(4);
+            $products = Product::where('id_category', $this->category->id)->where('name', 'like', '%'.$this->search.'%')->latest()->paginate(4);
         } else {
-            $products = Product::where('id_category', $this->category->id)->paginate(4);
+            $products = Product::where('id_category', $this->category->id)->latest()->paginate(4);
         }
 
         return view('livewire.product-index', [

@@ -241,7 +241,7 @@
                                     </div>
                                     <div class="relative flex w-full flex-wrap items-stretch mb-3">
                                         <label class="text-sm font-medium text-gray-900 block mb-2"
-                                            for="user_avatar">File image</label>
+                                            for="user_avatar">File image (recommended ratio image = 1:1)</label>
                                         <input id="image" wire:model="image"
                                             class="text-sm sm:text-base relative w-full border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-12"
                                             aria-describedby="user_avatar_help" type="file">
@@ -260,7 +260,7 @@
                                         <div class="rounded-xl flex justify-between mt-4 content-center">
                                             <div class="flex space-x-6 items-center">
                                                 <img class="mr-3"
-                                                    src="{{ asset('storage/' . $old_image) }}" alt="BRI" width="250">
+                                                    src="{{ asset('storage/' . $old_image) }}" alt="Old Img" width="250">
                                                 <div>
                                                     <p class="font-semibold text-base">Old Image</p>
                                                     </p>
@@ -370,7 +370,7 @@
                                         <td class="py-3 px-6 text-center">
                                             <div class="flex items-center justify-center">
                                                 <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-                                                    src="{{ asset('assets/product') . '/' . $product->image }}" />
+                                                    src="{{ asset('storage/' . $product->image) }}"/>
                                             </div>
                                         </td>
                                         <td class="py-3 px-6 text-center">

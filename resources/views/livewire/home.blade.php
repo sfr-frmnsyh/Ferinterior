@@ -17,7 +17,7 @@
         @foreach ($products as $product)
             <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                 <img class="rounded border border-gray-250 hover:grow hover:shadow-lg"
-                    src="{{ url('assets/product') }}/{{ $product->image }}" alt="product img"
+                    src="{{ url('storage') }}/{{ $product->image }}" alt="product img"
                     class="img-fluid">
                 <div class="pt-3 flex items-center justify-between">
                     <p class="">{{ $product->name }}</p>

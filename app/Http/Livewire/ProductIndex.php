@@ -25,9 +25,9 @@ class ProductIndex extends Component
     public function render()
     {
         if ($this->search) {
-            $products = Product::where('name', 'like', '%'.$this->search.'%')->paginate(4);
+            $products = Product::where('name', 'like', '%'.$this->search.'%')->latest()->paginate(4);
         } else {
-            $products = Product::paginate(4);
+            $products = Product::latest()->paginate(4);
         }
         
         return view('livewire.product-index', [

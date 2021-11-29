@@ -5,7 +5,7 @@
             <div class="flex justify-between items-center mt-6 pt-6 border-t">
                 <div class="flex items-center">
                     <a href="{{ route('products.detail', $orderDetail->product->id) }}">
-                        <img src="{{ asset('assets/product') . '/' . $orderDetail->product->image }}" width="60"
+                        <img src="{{ asset('storage') . '/' . $orderDetail->product->image }}" width="60"
                             class="rounded">
                     </a>
                     <div class="flex flex-col ml-3 "> <span
@@ -28,8 +28,7 @@
 
         @empty
             <div class="flex justify-between items-center mt-6 pt-6 border-t">
-                <div class="flex items-center"> <img src="https://i.imgur.com/xbTAITF.jpg" width="60"
-                        class="rounded-full ">
+                <div class="flex items-center"> <i class="fas fa-low-vision"></i>
                     <div class="flex flex-col ml-3 "> <span class="text-md font-medium">No Data</span>
                         <span class="text-xs font-light text-gray-400">@ Rp. -</span>
                     </div>

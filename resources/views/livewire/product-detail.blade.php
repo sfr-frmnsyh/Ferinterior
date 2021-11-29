@@ -11,7 +11,7 @@
                 <div class="p-6 mx-auto flex flex-wrap">
                     <img alt="ecommerce"
                         class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-250 hover:grow hover:shadow-lg"
-                        src="{{ url('assets/product') }}/{{ $product->image }}" alt="product img">
+                        src="{{ url('storage') }}/{{ $product->image }}" alt="product img">
                     <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                         <h2 class="text-sm title-font text-gray-500 tracking-widest">
                             PRODUCT NAME

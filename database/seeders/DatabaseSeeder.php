@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Gray',
             'size' => '80 x 70',
             'weight' => 38.5,
-            'image' => 'single_sofa_nobu_gray.png',
+            'image' => 'products/single_sofa_nobu_gray.png',
         ]);
 
         Product::create([
@@ -81,7 +81,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Blue',
             'size' => '80 x 70',
             'weight' => 38.5,
-            'image' => 'single_sofa_nobu_blue.png',
+            'image' => 'products/single_sofa_nobu_blue.png',
         ]);
 
         Product::create([
@@ -92,7 +92,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Yellow',
             'size' => '200 x 70',
             'weight' => 44.5,
-            'image' => 'double_sofa_nobu.png',
+            'image' => 'products/double_sofa_nobu.png',
         ]);
 
         Product::create([
@@ -103,7 +103,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Brown',
             'size' => '100 x 70',
             'weight' => 9.5,
-            'image' => 'wooden_chair.png',
+            'image' => 'products/wooden_chair.png',
         ]);
 
         Product::create([
@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'White',
             'size' => '150 x 100',
             'weight' => 15.5,
-            'image' => 'bubble_chair.png',
+            'image' => 'products/bubble_chair.png',
         ]);
 
         Product::create([
@@ -125,7 +125,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Brown',
             'size' => '140 x 190',
             'weight' => 50.5,
-            'image' => 'minimalis_wood_wardrobe.png',
+            'image' => 'products/minimalis_wood_wardrobe.png',
         ]);
 
         Product::create([
@@ -136,7 +136,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Brown',
             'size' => '130 x 170',
             'weight' => 46.5,
-            'image' => 'oinetako_closet_wardrobe.png',
+            'image' => 'products/oinetako_closet_wardrobe.png',
         ]);
 
         Product::create([
@@ -147,7 +147,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'Brown',
             'size' => '100 x 55',
             'weight' => 22.5,
-            'image' => 'coffe_table.png',
+            'image' => 'products/coffe_table.png',
         ]);
 
         Product::create([
@@ -158,7 +158,7 @@ class DatabaseSeeder extends Seeder
             'colour' => 'White',
             'size' => '160 x 70',
             'weight' => 32.5,
-            'image' => 'office_table_desk.png',
+            'image' => 'products/office_table_desk.png',
         ]);
     }
 }
