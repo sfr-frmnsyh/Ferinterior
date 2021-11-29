@@ -49,19 +49,8 @@
                                         $array = explode('.', $old_image_payment);
                                     @endphp
                                     @if ($array[count($array) - 1] == 'png' || $array[count($array) - 1] == 'jpg' || $array[count($array) - 1] == 'jpeg')
-                                        {{-- <div class="rounded-xl flex justify-between mt-4 content-center">
-                                            <div class="flex space-x-6 items-center">
-                                                <img class="mr-3"
-                                                    src="{{ asset('storage/' . $old_image_payment) }}" alt="Old Img" width="250">
-                                                <div>
-                                                    <p class="font-semibold text-base">Old Image</p>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div> --}}
-
                                         <div>
-                                            <img class="w-32 h-32 mx-auto" src="{{ asset('storage/' . $old_image_payment) }}" alt="PaymentImg">
+                                            <img class="w-80 h-80 mx-auto" src="{{ asset('storage/' . $old_image_payment) }}" alt="PaymentImg">
                                         </div>
                                         <div>
                                             <div class="text-center text-gray-400 text-xs font-semibold">

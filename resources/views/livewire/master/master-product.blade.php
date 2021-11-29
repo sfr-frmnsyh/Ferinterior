@@ -257,14 +257,13 @@
                                         $array = explode('.', $old_image);
                                     @endphp
                                     @if ($array[count($array) - 1] == 'png' || $array[count($array) - 1] == 'jpg' || $array[count($array) - 1] == 'jpeg')
-                                        <div class="rounded-xl flex justify-between mt-4 content-center">
-                                            <div class="flex space-x-6 items-center">
-                                                <img class="mr-3"
-                                                    src="{{ asset('storage/' . $old_image) }}" alt="Old Img" width="250">
-                                                <div>
-                                                    <p class="font-semibold text-base">Old Image</p>
-                                                    </p>
-                                                </div>
+                                        <div>
+                                            <img class="w-80 h-80 mx-auto"
+                                                src="{{ asset('storage/' . $old_image) }}" alt="old image">
+                                        </div>
+                                        <div>
+                                            <div class="text-center text-gray-400 text-xs font-semibold">
+                                                <p>Old Image</p>
                                             </div>
                                         </div>
                                     @endif
@@ -370,7 +369,7 @@
                                         <td class="py-3 px-6 text-center">
                                             <div class="flex items-center justify-center">
                                                 <img class="w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125"
-                                                    src="{{ asset('storage/' . $product->image) }}"/>
+                                                    src="{{ asset('storage/' . $product->image) }}" />
                                             </div>
                                         </td>
                                         <td class="py-3 px-6 text-center">
