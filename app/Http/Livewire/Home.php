@@ -11,8 +11,8 @@ class Home extends Component
     public function render()
     {
         return view('livewire.home',[
-            'products' => Product::take(8)->get()->latest(),
-            'categories' => Category::take(8)->get()->latest(),
+            'products' => Product::take(8)->latest()->get(),
+            'categories' => Category::take(8)->latest()->get(),
         ])->layout('layouts.home.app');
     }
 }
