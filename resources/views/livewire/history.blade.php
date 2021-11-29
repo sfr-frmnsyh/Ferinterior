@@ -102,6 +102,10 @@
                         class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                         Total
                     </th>
+                    <th
+                        class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                        Action
+                    </th>
                 </tr>
             </thead>
 
@@ -129,7 +133,6 @@
                                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
                                     Menunggu Pembayaran
                                 </span>
-                                <i wire:click='passing_value_for_edit({{ $order->id }})' class="fas fa-file-upload text-lg cursor-pointer"></i>
                             @elseif ($order->status == 2)
                                 <span
                                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-yellow-100 bg-yellow-600 rounded-full">
@@ -151,6 +154,19 @@
                         </td>
                         <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                             Rp. {{ number_format($order->price_total) }}
+                        </td>
+                        <td class="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
+                            @if ($order->status == 1)
+                                <i wire:click='passing_value_for_edit({{ $order->id }})' class="fas fa-file-upload text-lg cursor-pointer"></i>
+                            @elseif ($order->status == 2)
+                                <a href="{{ route('invoice', $order->id) }}"><i class="fas fa-eye text-lg cursor-pointer"></i></a>
+                            @elseif ($order->status == 3)
+                                <a href="{{ route('invoice', $order->id) }}"><i class="fas fa-eye text-lg cursor-pointer"></i></a>
+                            @elseif ($order->status == 4)
+                                <a href="{{ route('invoice', $order->id) }}"><i class="fas fa-eye text-lg cursor-pointer"></i></a>
+                            @else
+                                Error
+                            @endif
                         </td>
                     </tr>
                 @empty

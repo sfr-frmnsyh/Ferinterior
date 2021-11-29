@@ -22,6 +22,7 @@ Route::get('/cart', [App\Http\Livewire\Cart::class, '__invoke'])->name('cart');
 Route::get('/checkout', [App\Http\Livewire\Checkout::class, '__invoke'])->name('checkout');
 Route::get('/history', [App\Http\Livewire\History::class, '__invoke'])->name('history');
 Route::get('/aboutus', [App\Http\Livewire\AboutUs::class, '__invoke'])->name('aboutus');
+Route::get('/invoice/{id_order}', [App\Http\Livewire\Invoice::class, '__invoke'])->name('invoice');
 
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/products', [App\Http\Livewire\Master\MasterProduct::class, '__invoke'])->name('master.products');
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/categories', [App\Http\Livewire\Master\MasterCategory::class, '__invoke'])->name('master.categories');

@@ -48,7 +48,7 @@
 
     <div class="order-1 md:order-2 flex justify-center">
         <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-            href="#">
+            href="{{ route('/') }}">
             <img src="{{ asset('assets/project_logo/ferinterior.svg') }}" alt="" width="150">
         </a>
     </div>
