@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class MasterAboutUs extends Component
 {
-    public $name, $address, $phone_number, $link_facebook, $link_twitter, $link_instagram, $about;
+    public $name, $address, $phone_number, $link_facebook, $link_twitter, $link_instagram, $about, $about2;
 
     public function mount()
     {
@@ -21,6 +21,7 @@ class MasterAboutUs extends Component
             $this->link_twitter = $about->link_twitter;
             $this->link_instagram = $about->link_instagram;
             $this->about = $about->about;
+            $this->about2 = $about->about2;
         }
     }
 
@@ -38,7 +39,8 @@ class MasterAboutUs extends Component
             'link_facebook' => 'required',
             'link_twitter' => 'required',
             'link_instagram' => 'required',
-            'about' => 'required'
+            'about' => 'required',
+            'about2' => 'required'
         ]);
 
         AboutUs::updateOrCreate(['index' => '1'], [
@@ -48,7 +50,8 @@ class MasterAboutUs extends Component
             'link_facebook' => $this->link_facebook,
             'link_twitter' => $this->link_twitter,
             'link_instagram' => $this->link_instagram,
-            'about' => $this->about
+            'about' => $this->about,
+            'about2' => $this->about2
         ]);
 
         $this->dispatchBrowserEvent('swal:success', [
