@@ -24,6 +24,7 @@ Route::get('/history', [App\Http\Livewire\History::class, '__invoke'])->name('hi
 Route::get('/aboutus', [App\Http\Livewire\AboutUs::class, '__invoke'])->name('aboutus');
 
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/products', [App\Http\Livewire\Master\MasterProduct::class, '__invoke'])->name('master.products');
+Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/categories', [App\Http\Livewire\Master\MasterCategory::class, '__invoke'])->name('master.categories');
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/aboutus', [App\Http\Livewire\Master\MasterAboutUs::class, '__invoke'])->name('master.aboutus');
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/orders', [App\Http\Livewire\Master\MasterOrder::class, '__invoke'])->name('master.orders');
 Route::middleware(['auth:sanctum', 'isAdmin'])->get('/master/orders/{id_order}', [App\Http\Livewire\Master\MasterOrderDetail::class, '__invoke'])->name('master.orders.detail');
