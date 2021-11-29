@@ -129,7 +129,7 @@
                                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
                                     Menunggu Pembayaran
                                 </span>
-                                <i wire:click='passing_value_for_edit({{ $order->id }})' class="fas fa-file-upload text-lg"></i>
+                                <i wire:click='passing_value_for_edit({{ $order->id }})' class="fas fa-file-upload text-lg cursor-pointer"></i>
                             @elseif ($order->status == 2)
                                 <span
                                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-yellow-100 bg-yellow-600 rounded-full">
