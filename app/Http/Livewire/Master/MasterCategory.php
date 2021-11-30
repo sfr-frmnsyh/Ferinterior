@@ -9,16 +9,21 @@ use Livewire\WithPagination;
 class MasterCategory extends Component
 {
     use WithPagination;
-    public $id_category, $name;
+    
     public $modal = false;
-    public $string_form_status = " ";
-
+    public $search;
+    // listener search
+    protected $updatedQueryString = ['search'];
+    
     // listener livewire emit
     protected $listeners = ['destroy'];
+    
+    public $id_category, $name;
+    public $string_form_status = " ";
 
     public function render()
     {
-        $categories = Category::paginate(10);
+        $categories = Category::where('name', 'like', '%'.$this->search.'%')->paginate(10);
 
         return view('livewire.master.master-category', [
             'categories' => $categories
