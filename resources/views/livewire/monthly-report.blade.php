@@ -1,16 +1,17 @@
 <section class="text-gray-600 body-font">
-    <div class="container px-5 py-10 mx-auto">
+    <div class="px-5 py-10 mx-auto">
 
         <div class="mx-4 card bg-white p-10 rounded-lg">
 
             <div class="flex flex-col text-center w-full mb-5">
                 <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Monthly Report.</h1>
                 @if (!empty($search_year) and !empty($search_month_s) and !empty($search_month_e))
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Year : {{ $search_year }}</p>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Month : 01-{{ $search_month_s }} ~ 01-{{ $search_month_e }}</p>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Year : {{ $search_year }}</p>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Month : 01-{{ $search_month_s }} ~
+                        01-{{ $search_month_e }}</p>
                 @else
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Year : </p>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Month : </p>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Year : </p>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Month : </p>
                 @endif
 
             </div>
@@ -74,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <div class="flex w-full overflow-auto">
                 <table class="table-auto w-full text-left whitespace-no-wrap">
                     <thead>
                         <tr>
@@ -83,13 +84,19 @@
                                 No</th>
                             <th
                                 class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 text-center">
-                                Order Number</th>
+                                Product Name</th>
                             <th
                                 class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 text-center">
                                 User</th>
                             <th
                                 class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 text-center">
+                                Amount</th>
+                            <th
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 text-center">
                                 Date</th>
+                                <th
+                                class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 text-center">
+                                Order Number</th>
                             <th
                                 class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 text-center">
                                 Price</th>
@@ -100,23 +107,25 @@
                             $no = 1;
                             $grand_total = 0;
                         @endphp
-                        @foreach ($orders as $order)
+                        @foreach ($order_details as $order_detail)
                             <tr>
                                 <td class="px-4 py-3 text-center">{{ $no++ }}</td>
-                                <td class="px-4 py-3 text-center">{{ $order->order_number }}</td>
-                                <td class="px-4 py-3 text-center">{{ $order->user->name }}</td>
-                                <td class="px-4 py-3 text-center">{{ $order->created_at }}</td>
+                                <td class="px-4 py-3 text-center">{{ $order_detail->product->name }}</td>
+                                <td class="px-4 py-3 text-center">{{ $order_detail->order->user->name }}</td>
+                                <td class="px-4 py-3 text-center">{{ $order_detail->qty }}</td>
+                                <td class="px-4 py-3 text-center">{{ $order_detail->created_at }}</td>
+                                <td class="px-4 py-3 text-center">{{ $order_detail->order_number }}</td>
                                 <td class="px-4 py-3 text-lg text-gray-900 text-right">Rp.
-                                    {{ number_format($order->price_total + $order->unique_code) }}</td>
+                                    {{ number_format($order_detail->price) }}</td>
                             </tr>
                             @php
-                                $grand_total += $order->price_total + $order->unique_code;
+                                $grand_total += $order_detail->price;
                             @endphp
                         @endforeach
                     </tbody>
                 </table>
             </div>
-            <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+            <div class="flex pl-4 mt-4 w-full mx-auto">
                 <div class="inline-flex items-center md:mb-2 lg:mb-0">
                     <p>
                         Gross Profit Total :
