@@ -21,6 +21,12 @@ class MasterCategory extends Component
     public $id_category, $name;
     public $string_form_status = " ";
 
+    // Untuk menemukan pencarian item pada seluruh pagination (terlepas dari pagination saat ini)
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+    
     public function render()
     {
         $categories = Category::where('name', 'like', '%'.$this->search.'%')->paginate(10);
