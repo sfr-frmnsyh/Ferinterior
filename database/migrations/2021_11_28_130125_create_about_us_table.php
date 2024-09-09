@@ -18,13 +18,13 @@ class CreateAboutUsTable extends Migration
 
             $table->string('index')->default('1');
             $table->string('name')->unique();
-            $table->string('address');
-            $table->string('phone_number');
-            $table->string('link_facebook');
-            $table->string('link_twitter');
-            $table->string('link_instagram');
-            $table->text('about');
-            $table->text('about2')->default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt aspernatur impedit illo neque delectus cum culpa sequi harum aut voluptatibus iusto a magnam nihil quo, aperiam accusamus animi dolore exercitationem labore. Blanditiis doloribus culpa at soluta nam placeat, consequatur ducimus adipisci, debitis voluptate odio explicabo a minima animi? Distinctio.');
+            $table->string('address')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('link_facebook')->nullable();
+            $table->string('link_twitter')->nullable();
+            $table->string('link_instagram')->nullable();
+            $table->text('about')->nullable();
+            $table->text('about2')->nullable();
 
             $table->timestamps();
         });

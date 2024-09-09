@@ -39,7 +39,8 @@ class DatabaseSeeder extends Seeder
             'link_facebook' => 'https://github.com/sfr-frmnsyh',
             'link_twitter' => 'https://github.com/sfr-frmnsyh',
             'link_instagram' => 'https://github.com/sfr-frmnsyh',
-            'about' => 'Ferinterior adalah sebuah peritel perabot untuk rumah tangga dari Noxus. Pada musim dingin 1920, terdapat 5 toko Ferinterior yang tersebar di wilayah Noxus. Katalog Ferinterior yang berisi info produk Ferinterior diperkirakan adalah Toko yang pendistribusiannya terluas di seantero Runetera.'
+            'about' => 'Ferinterior adalah sebuah peritel perabot untuk rumah tangga dari Noxus. Pada musim dingin 1920, terdapat 5 toko Ferinterior yang tersebar di wilayah Noxus. Katalog Ferinterior yang berisi info produk Ferinterior diperkirakan adalah Toko yang pendistribusiannya terluas di seantero Runetera.',
+            'about2' => 'Ferinterior adalah sebuah peritel perabot untuk rumah tangga dari Noxus. Pada musim dingin 1920, terdapat 5 toko Ferinterior yang tersebar di wilayah Noxus. Katalog Ferinterior yang berisi info produk Ferinterior diperkirakan adalah Toko yang pendistribusiannya terluas di seantero Runetera.'
         ]);
 
         Category::create([

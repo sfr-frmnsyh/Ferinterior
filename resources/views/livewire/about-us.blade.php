@@ -10,11 +10,11 @@
         </a>
 
         <p class="mt-8 mb-8">
-            {{ $aboutus->about }}
+            {{ @$aboutus->about }}
         </p>
 
         <p class="mb-8">
-            {{ $aboutus->about2 }}
+            {{ @$aboutus->about2 }}
         </p>
 
     </div>
